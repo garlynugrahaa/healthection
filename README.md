@@ -1,66 +1,128 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+### <p align="center"><b>Welcome to Healthection</b></p>
+
+------------
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## 🤨 What is Healthection?
+Healthection is a powerful tool designed to detect and monitor cardiovascular disease with high accuracy. This tool combines the latest technology in digital health and artificial intelligence to provide fast and precise early diagnosis, as well as continuous monitoring of heart health.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Features Available
+- Authentication
+  - Login (Admin, Operator & Patient)
+  - Register (Patient)
+- Data Management
+  - Operator
+  - Patient
+     
+## 💾 Required Prerequisites
+To run this project, the following is a list of services and applications that are mandatory and required when running the Learnify application. If you don't have it installed, it is recommended to install it first.
+- PHP (Minimum PHP v8.1.10)
+- Web Server (XAMPP, Laragon, and other Web Servers)
+- Web Browser (Chrome, Firefox, Safari & Opera)
+- Internet Network
+- PHP advanced settings (max_upload & post_max in php.ini)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 💻 Guide to Running & Installing Applications
+In order to run this application or website, you need to install a web server such as XAMPP or Laragon and have at least one web browser installed on your computer.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Clone Repository
+Open Command Prompt or Git Bash, then navigate to the directory where you want to save the project files. After that, type the following command.
+```bash
+git clone https://github.com/garlynugrahaa/healthection.git
+```
+```bash
+cd healthection
+```
 
-## Learning Laravel
+### Install Depedency
+Dependencies are a collection of libraries required by our Laravel application, including the Laravel framework itself. To install all dependencies, use the following command.
+```bash
+composer install
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Setup Environment Variable
+After the composer installation process is complete, we need to create an .env file in our application folder. However, usually a sample file is available. We only need to copy the file by typing the following command.
+```bash
+cp .env.example .env
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Generate an app Encryption Key
+```bash
+php artisan key:generate
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Open Project with VS Code
+```bash
+code .
+```
 
-## Laravel Sponsors
+### set Database on .env File
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=YourDatabase
+DB_USERNAME=YourUsernameDatabase
+DB_PASSWORD=YourPasswordDatabase
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Finalizing The Installation
+you should install and build your NPM dependencies and migrate your database
+```bash
+npm install
+```
+```bash
+npm run build
+```
+```bash
+php artisan migrate --seed
+```
+```bash
+php artisan storage:link
+```
 
-### Premium Partners
+### Running Server
+```bash
+php artisan serve
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## 🧑 Author
+- Garly Nugraha
+  - Instagram : <a href="https://www.instagram.com/garlynugrahaa/">@garlynugrahaa</a>
+  - GitHub : <a href="https://github/garlynugrahaa/">@garlynugrahaa</a>
+- Finna Elfiana Nabilah
+  - Instagram : <a href="https://www.instagram.com/finerlfinn/">@finelfinn</a>
 
-## Contributing
+## 🤝 Contribution
+I really appreciate contributions, issues, and feature requests as this app is far from perfect. Feel free to submit a pull request and make changes to this project. Considering that I am working on this project myself, there are still many features and things that need to be improved, so your help means a lot to me.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📥 Push Repository
+```bash
+git add .
+```
+```bash
+git commit -m "FEAT : Description"
+```
+Commit Information : 
+- ADD (Copy and Paste File)
+- INST (Install the package or technology needed)
+- MAKE (Create migration files, seeders, controllers, models, and more)
+- FEAT (Adding new features)
+- FIX (Fixing bugs)
+- DEL (Delete folder, file, or code)
 
-## Code of Conduct
+```bash
+git push -u origin branch-name
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🔱 License
+- The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Copyright © Arcanusantara - 2024
 
-## Security Vulnerabilities
+------------
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p align="center"><b>Made with ❤️ by Arcanusantara</b></p>
