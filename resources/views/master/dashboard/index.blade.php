@@ -22,4 +22,28 @@
             </div>
         </div>
     </div>
+
+    @hasrole('Patient')
+        <div class="row">
+            <div class="col-6 mb-4">
+                <div class="hero bg-primary text-white">
+                    <div class="hero-inner">
+                        <h4>Contact</h2>
+                        <div class="form-group row">
+                            <p class="col-sm-3 col-form-label">Email</p>
+                            <div class="col-sm-9">
+                                <input type="text" value="{{ __('contact@healthection.com') }}" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <p class="col-sm-3 col-form-label">Phone</p>
+                            <div class="col-sm-9">
+                                <input type="text" value="{{ __('+62 813-1737-0974') }}" class="form-control" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endhasrole
 @endsection

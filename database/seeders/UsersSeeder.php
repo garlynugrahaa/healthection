@@ -10,9 +10,6 @@ use Illuminate\Support\Str;
 
 class UsersSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         User::create([
@@ -24,5 +21,15 @@ class UsersSeeder extends Seeder
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ])->assignRole('Administrator');
+
+        User::create([
+            'name' => 'Garly Nugraha',
+            'email' => 'garlynugrahaa@healthection.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('A>eC;)6f(!nbkvUm<WT+cN'),
+            'remember_token' => Str::random(10),
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ])->assignRole('Operator');
     }
 }

@@ -11,6 +11,19 @@
         <ul class="sidebar-menu">
             <li class="menu-header">{{ __('Master') }}</li>
             <li class="{{ Request::routeIs('dashboard') ? 'active' : '' }}"><a class="nav-link" href="{{ route('dashboard') }}"><i class="fas fa-fire"></i> <span>{{ __('Dashboard') }}</span></a></li>
+
+            <li class="menu-header">{{ __('Data Management') }}</li>
+            @hasrole('Administrator')
+                <li class="{{ Request::routeIs('operator.index') ? 'active' : '' }}"><a class="nav-link" href="{{ route('operator.index') }}"><i class="fas fa-users"></i> <span>{{ __('Operator') }}</span></a></li>
+            @endhasrole
+            
+            @hasanyrole('Administrator|Operator')
+                <li class="{{ Request::routeIs('patient.index') ? 'active' : '' }}"><a class="nav-link" href="{{ route('patient.index') }}"><i class="fas fa-hospital"></i> <span>{{ __('Patient') }}</span></a></li>
+            @endhasanyrole
+
+            @hasrole('Patient')
+                <li class="{{ Request::routeIs('tensimeter.index', Auth::user()->id) ? 'active' : '' }}"><a class="nav-link" href="{{ route('tensimeter.index', Auth::user()->id) }}"><i class="fas fa-hospital"></i> <span>{{ __('Patient') }}</span></a></li>
+            @endhasrole
         </ul>
     </aside>
 </div>
